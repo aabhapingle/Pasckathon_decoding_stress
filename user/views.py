@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Profile
 
-
+def welcome(request):
+    return render(request, 'user/welcome.html')
 def usersignup(request) :
     if request.method == 'POST' :
         try :
