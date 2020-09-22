@@ -15,14 +15,16 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    data = request.json
-    int_features = [int(x) for x in jsonify(data)]
-    final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
+     if request.method == 'POST':
+        data = request.json
+        return jsonify(data)
+        int_features = [int(x) for x in jsonify(data)]
+        final_features = [np.array(int_features)]
+        prediction = model.predict(final_features)
 
     output = prediction[0]
 
-    return render_template('index.html', prediction_text='Your stress level is: ${}'.format(output))
+    return render_template('index.html', prediction_text='Your stress level is: {}'.format(output))
 
 # @app.route('/predict_api', methods = ['POST'])
 # def predict_api():

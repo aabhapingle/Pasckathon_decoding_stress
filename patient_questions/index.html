@@ -167,3 +167,50 @@
 	</script>
 </body>
 </html>
+
+<!-- <html>
+    <head>
+        <title>Flask Ajax</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="data"></div>       
+        <button id="demo_btn">Dummy button</button>
+        <script>
+            function getVals(){
+                  a = ["ab", "cd"];
+                  return a;
+            }
+            $(document).ready(function () {
+                $("#demo_btn").on("click", function() {
+                    var js_data = JSON.stringify(getVals());
+                    $.ajax({                        
+                        url: '/end_stu_live_session',
+                        type : 'post',
+                        contentType: 'application/json',
+                        dataType : 'json',
+                        data : js_data
+                    }).done(function(result) {
+                        console.log(result);
+                        $("#data").html(result);
+                    }).fail(function(jqXHR, textStatus, errorThrown) {
+                        console.log("fail: ",textStatus, errorThrown);
+                    });
+                });
+            });
+        </script>       
+    </body>
+</html>
+
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/end_stu_live_session',methods=["GET", "POST"])
+def end_stu_live_session():
+    if request.method == 'POST':
+        data = request.json
+        return jsonify(data)
+    return render_template("home.html")
+
+app.run(debug=True) -->
