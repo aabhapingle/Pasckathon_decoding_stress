@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ML PROJECT</title>
+</head>
+<body>
+	<H1>----Predict your stress level----</H1>
+	<h2>
+		Please answer the following questions: <br><br>
+		All the questions are YES/NO questions. <br><br>
+		YES == 1 and NO == 0 <br><br>
+	</h2>
+
+
+	<form action="{{ url_for('predict')}}", method="post">
+		<H3>'Q1-Participated in Societies and Interest Groups':<br></H3>
+		<input type="text" name="q1" placeholder="q1" required="required">
+
+		<H3>'Q2-Participated in Clubs':<br></H3>
+		<input type="text" name="q2" placeholder="q2" required="required">
+
+		<H3>'Q3-Interested in Arts & Culture':</H3>
+				<input type="text" name="q3" placeholder="q2" required="required">
+
+
+		<H3>'Q4-Interested in Science & Technology'</H3>
+				<input type="text" name="q4" placeholder="q2" required="required">
+
+
+		<H3>'Q5-Interested in Sports'</H3>
+				<input type="text" name="q5" placeholder="q2" required="required">
+
+
+		<H3>'Q6-Passionate about Animal welfare'</H3>
+				<input type="text" name="q6" placeholder="q2" required="required">
+
+
+		<H3>'Q7-Passionate about Health/Well-being (e.g mental health)'</H3>
+				<input type="text" name="q7" placeholder="q2" required="required">
+
+
+		<H3>'Q8-Stressed about Adjustment issues'</H3>
+				<input type="text" name="q8" placeholder="q2" required="required">
+
+
+		<H3>'Q9-Stressed about Academic issues'</H3>
+				<input type="text" name="q9" placeholder="q2" required="required">
+
+
+		<H3>'Q10-Stressed about Financial issues'</H3>
+				<input type="text" name="q10" placeholder="q2" required="required">
+
+
+		<H3>'Q11-Stressed about Family issues'</H3>
+				<input type="text" name="q11" placeholder="q2" required="required">
+
+
+		<H3>'Q12-Stressed about Friendships'</H3>
+				<input type="text" name="q12" placeholder="q2" required="required">
+
+
+		<H3>'Q13-Stressed about Romantic relationships'</H3>
+				<input type="text" name="q13" placeholder="q2" required="required">
+
+
+		<H3>'Q14-Stressed about  Health related issues'</H3>
+				<input type="text" name="q14" placeholder="q2" required="required">
+
+
+		<H3>'Q15-Stressed about Career related issues'</H3>
+				<input type="text" name="q15" placeholder="q2" required="required">
+
+
+		<H3>'Q16-Stressed about My involvement in hostel, clubs, societies, interest groups, etc.'</H3>
+				<input type="text" name="q16" placeholder="q2" required="required">
+
+				<br>
+				<br>
+
+		<button type="submit">Predict</button>
+
+	</form>
+
+	<br>
+	<br>
+
+	{{prediction_text}}
+
+</body>
+</html>
