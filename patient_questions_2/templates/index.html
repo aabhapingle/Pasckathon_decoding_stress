@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+	<title>ML PROJECT</title>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="id_nav" >
+		<a class="navbar-brand" class="nav-link disabled" href="#" style="cursor: default;">
+			<!-- <img src="b29fbe0e-a71a-4c81-a411-030f2534ac4c_200x200.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> -->
+
+			<img src="{{url_for('static', filename='doc.png')}}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+			Stress Free
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	</nav>
+</head>
+<style>
+	.qs{
+		font-size: 20px;
+		color:  #07a799;
+		margin-bottom: 2%;
+		margin-top: 4%;
+		text-align: center;
+	}
+	#head_,
+	#instr{
+		text-align: center;
+		font-family: sans-serif;
+	}
+</style>
+<body>
+	<div class = "container" style="margin-top: 5%;">
+		<H3 id = "head_">Predict your stress level by answering these questions !</H3>
+		<h5 id = "instr">
+			<!-- Please answer the following questions: <br><br> -->
+			<!-- All the questions are YES/NO questions. <br><br> -->
+			(yes = 1 and no = 0) <br><br>
+		</h5>
+
+
+		<form action="{{ url_for('predict')}}", method="post">
+			<p class = "qs">Q1-Do you participate in Societies and Interest Groups?<br></p>
+			<div style="text-align: center;"><input type="text" name="q1"  required="required" class = ""></div>
+
+			<p class = "qs">Q2-Do you like attending various Clubs?<br></p>
+			<div style="text-align: center;"><input type="text" name="q2"  required="required"></div>
+
+			<p class = "qs">Q3-Are you interested in Arts & Culture?<br></p>
+			<div style="text-align: center;"><input type="text" name="q3"  required="required"></div>
+
+
+			<p class = "qs">Q4-Are you passionate about Science & Technology?<br></p>
+			<div style="text-align: center;"><input type="text" name="q4"  required="required"></div>
+
+
+			<p class = "qs">Q5-Do you actively take part in Sports?<br></p>
+			<div style="text-align: center;"><input type="text" name="q5"  required="required"></div>
+
+
+			<p class = "qs">Q6-Are you passionate about Animal welfare?<br></p>
+			<div style="text-align: center;"><input type="text" name="q6"  required="required"></div>
+
+
+			<p class = "qs">Q7-Are you cautious about your Health/Well-being (e.g mental health)?<br></p>
+			<div style="text-align: center;"><input type="text" name="q7"  required="required"></div>
+
+
+			<p class = "qs">Q8-Are you stressed about Adjustment issues?<br></p>
+			<div style="text-align: center;"><input type="text" name="q8"  required="required"></div>
+
+
+			<p class = "qs">Q9-Are you worried about your academics?<br></p>
+			<div style="text-align: center;"><input type="text" name="q9" required="required"></div>
+
+
+			<p class = "qs">Q10-Are you facing any financial problems?<br></p>
+			<div style="text-align: center;"><input type="text" name="q10"  required="required"></div>
+
+
+			<p class = "qs">Q11-Any family issues?<br></p>
+			<div style="text-align: center;"><input type="text" name="q11"  required="required"></div>
+
+
+			<p class = "qs">Q12-Do you feel that you are losing friends?<br></p>
+			<div style="text-align: center;"><input type="text" name="q12"  required="required"></div>
+
+
+			<p class = "qs">Q13-Stressed about Romantic relationships?<br></p>
+			<div style="text-align: center;"><input type="text" name="q13"  required="required"></div>
+
+
+			<p class = "qs">Q14-Are you facing any health related issues?<br></p>
+			<div style="text-align: center;"><input type="text" name="q14"  required="required"></div>
+
+
+			<p class = "qs">Q15-Worried about your career?<br></p>
+			<div style="text-align: center;"><input type="text" name="q15"  required="required"></div>
+
+
+			<p class = "qs">Q16-Stressed about My involvement in hostel, clubs, societies, interest groups, etc.?<br></p>
+			<div style="text-align: center;"><input type="text" name="q16" required="required"></div>
+
+					<br>
+					<br>
+
+					<div style="text-align: center; "><button type="submit" style="background-color: #07a799; color:white">Predict</button></div>
+
+		</form>
+	</div>
+
+	<br> 	 	
+	<br>
+
+	<div style="text-align: center; ">{{prediction_text}}</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+
+</body>
+</html>
