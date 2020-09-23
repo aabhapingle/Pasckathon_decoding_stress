@@ -1,0 +1,329 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+
+        <title>index</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+            *{
+                font-family: 'Quicksand', sans-serif;
+            }
+            .nav-link{
+                text-transform:uppercase;
+                text-decoration: none;
+                display: inline-block;
+                padding: 15px;
+                position: relative;
+                letter-spacing: 1.5px;
+            }
+
+            nav{
+                margin-bottom: 5%;
+            }
+            /* .options_btn{ */
+                /* width: 50%;
+                height: 6vh;
+                background-color: #07a799;
+                color:white;
+                border:  #07a799;
+                font-weight: 400;
+                letter-spacing: 0.1px;
+                font-size: 20px;
+                font-family: sans-serif;
+                border-radius: 20% 50%;
+                padding: 5px 10px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 16px; */
+            /* } */
+            .options{
+                margin-bottom: 3%;
+                text-align: center;
+                order:4px solid #26759E;
+                -webkit-box-shadow: #878787 0px 2px 2px ;
+                -moz-box-shadow: #878787 0px 2px 2px ;
+                box-shadow: #878787 0px 2px 2px ;
+                -webkit-border-radius: 23px;
+                -moz-border-radius: 23px;
+                border-radius: 23px;
+                font-size:20px;
+                font-family:'Quicksand', sans-serif;
+                 padding: 10px 20px 10px 20px;
+                 border-color: #07a799;
+                text-decoration:none;
+                display:block;
+                font-weight:400;
+                color:white;
+                background-color: #07a799 ;
+            }
+            .out{
+                text-align: center;
+            }
+            .options:hover{
+                text-decoration: none;
+                color: #07a799 ;
+                background-color: #ffffff;
+                transition: 0.5s;
+            }
+            @media screen and (max-width: 991px) and (min-width: 600px){
+                .options{
+                    width: 50%;
+                }
+                .out{
+                    padding-left: 30%;
+                }
+            }
+            @media only screen and (min-width: 992px) {
+
+                .options{
+                    width: 70%;
+                }
+                .out{
+                    padding-left: 20%;
+                }
+            .nav-link:hover:after {
+                width:100%;
+                right: 0;
+                }
+            .nav-link:after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 5px;
+                right: 0;
+                position: absolute;
+                background: #07a799;
+                transition: width 1s ease 0s, right 0.5s ease 0s;
+                width: 0;
+                }
+
+            }
+        </style>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="id_nav" >
+            <a class="navbar-brand" class="nav-link disabled" href="#" style="cursor: default;">
+                <img src="{% static 'img/b29fbe0e-a71a-4c81-a411-030f2534ac4c_200x200.png' %}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                Stress Free
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="#">Logout</a>
+              </div>
+            </div>
+        </nav>
+      </head>
+
+    <body>
+        <div style="width: 100%;padding-left: 2%; padding: 4%;">
+            <div class = "row">
+                <div class = "col-lg-6" style="margin-bottom: 6%;">
+                    <div class="card" style="width:100%;  height: 100%; border: none;margin: 0 auto; float: none; margin-bottom: 10px;">
+                        <img class="card-img-top" src="{% static 'img/5568.jpg' %}" alt="Card image cap">
+                    </div>
+                </div>
+                <div class = "col-lg-6">
+                    <div style="text-align: center; margin-bottom: 4.5%;"><h2 style="color: #07a799;font-size: 32px;font-weight: 900; ">We care for You!</h2></div>
+                    <div style="text-align: center;margin-bottom: 6%;"><p style="color: #07a799; font-size: 23px;">Take a survey of yourself. and manage your Health Reports.<br>Get advice from some of the best counselors,<br>and do not forget to check the stress relief games and videos section!</p></div>
+                    <div class = "out" style="text-align: center;"><a class="options" href="#">Search for Counselors</a></div>
+                    <div class = "out"><a class="options" href="#">Take a survey test</a></div>
+                    <div class = "out"><a class="options" href="#">Manage Reports</a></div>
+                    <div class = "out"><a class="options" href="#">Search for Counselors</a></div>
+                    <div class = "out"><a class="options" href="#">Stress relieving games</a></div>
+                    <div class = "out"><a class="options" href="#">Motivational videos</a></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</body><html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+
+        <title>index</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+            *{
+                font-family: 'Quicksand', sans-serif;
+            }
+            .nav-link{
+                text-transform:uppercase;
+                text-decoration: none;
+                display: inline-block;
+                padding: 15px;
+                position: relative;
+                letter-spacing: 1.5px;
+            }
+
+            nav{
+                margin-bottom: 5%;
+            }
+            /* .options_btn{ */
+                /* width: 50%;
+                height: 6vh;
+                background-color: #07a799;
+                color:white;
+                border:  #07a799;
+                font-weight: 400;
+                letter-spacing: 0.1px;
+                font-size: 20px;
+                font-family: sans-serif;
+                border-radius: 20% 50%;
+                padding: 5px 10px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 16px; */
+            /* } */
+            .options{
+                margin-bottom: 3%;
+                text-align: center;
+                order:4px solid #26759E;
+                -webkit-box-shadow: #878787 0px 2px 2px ;
+                -moz-box-shadow: #878787 0px 2px 2px ;
+                box-shadow: #878787 0px 2px 2px ;
+                -webkit-border-radius: 23px;
+                -moz-border-radius: 23px;
+                border-radius: 23px;
+                font-size:20px;
+                font-family:'Quicksand', sans-serif;
+                 padding: 10px 20px 10px 20px;
+                 border-color: #07a799;
+                text-decoration:none;
+                display:block;
+                font-weight:400;
+                color:white;
+                background-color: #07a799 ;
+            }
+            .out{
+                text-align: center;
+            }
+            .options:hover{
+                text-decoration: none;
+                color: #07a799 ;
+                background-color: #ffffff;
+                transition: 0.5s;
+            }
+            @media screen and (max-width: 991px) and (min-width: 600px){
+                .options{
+                    width: 50%;
+                }
+                .out{
+                    padding-left: 30%;
+                }
+            }
+            @media only screen and (min-width: 992px) {
+
+                .options{
+                    width: 70%;
+                }
+                .out{
+                    padding-left: 20%;
+                }
+            .nav-link:hover:after {
+                width:100%;
+                right: 0;
+                }
+            .nav-link:after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 5px;
+                right: 0;
+                position: absolute;
+                background: #07a799;
+                transition: width 1s ease 0s, right 0.5s ease 0s;
+                width: 0;
+                }
+
+            }
+        </style>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="id_nav" >
+            <a class="navbar-brand" class="nav-link disabled" href="#" style="cursor: default;">
+                <img src="{% static 'img/b29fbe0e-a71a-4c81-a411-030f2534ac4c_200x200.png' %}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                Stress Free
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="#">Logout</a>
+              </div>
+            </div>
+        </nav>
+      </head>
+
+    <body>
+        <div style="width: 100%;padding-left: 2%; padding: 4%;">
+            <div class = "row">
+                <div class = "col-lg-6" style="margin-bottom: 6%;">
+                    <div class="card" style="width:100%;  height: 100%; border: none;margin: 0 auto; float: none; margin-bottom: 10px;">
+                        <img class="card-img-top" src="{% static 'img/5568.jpg' %}" alt="Card image cap">
+                    </div>
+                </div>
+                <div class = "col-lg-6">
+                    <div style="text-align: center; margin-bottom: 4.5%;"><h2 style="color: #07a799;font-size: 32px;font-weight: 900; ">We care for You!</h2></div>
+                    <div style="text-align: center;margin-bottom: 6%;"><p style="color: #07a799; font-size: 23px;">Take a survey of yourself. and manage your Health Reports.<br>Get advice from some of the best counselors,<br>and do not forget to check the stress relief games and videos section!</p></div>
+                    <div class = "out" style="text-align: center;"><a class="options" href="#">Search for Counselors</a></div>
+                    <div class = "out"><a class="options" href="#">Take a survey test</a></div>
+                    <div class = "out"><a class="options" href="#">Manage Reports</a></div>
+                    <div class = "out"><a class="options" href="#">Search for Counselors</a></div>
+                    <div class = "out"><a class="options" href="#">Stress relieving games</a></div>
+                    <div class = "out"><a class="options" href="#">Motivational videos</a></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</body>

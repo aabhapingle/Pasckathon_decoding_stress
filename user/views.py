@@ -67,3 +67,5 @@ def answer(request):
         return render(request,'user/sucess.html')
     return render(request, 'user/sucess.html')
 
+def logout(request):
+    return render(request, 'user/logout.html')
