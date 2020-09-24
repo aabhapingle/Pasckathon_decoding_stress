@@ -34,8 +34,7 @@
 		margin-top: 4%;
 		text-align: center;
 	}
-	#head_,
-	#instr{
+	#head_{
 		text-align: center;
 		font-family: sans-serif;
 	}
@@ -47,15 +46,15 @@
 			text-align: left;
 		}
 		body{
-			background-image: url(../../img/Asset\ 3@2x.png);
+			background-image: url("{{url_for('static', filename='Asset 3@2x.png')}}");
 			background-attachment: fixed;
 			background-position: right;
 			background-repeat: no-repeat;
+			
 		}
 
 	}
-	#head_, 
-	#instr{
+	#head_{
 		font-family:'Quicksand', sans-serif;
 		font-weight: 1000;
 	}
@@ -63,15 +62,11 @@
 </style>
 <body>
 	<div class = "container" style="margin-top: 5%; ">
-		<H3 id = "head_">Predict your stress level by answering these questions !</H3>
-		<h5 id = "instr">
-			<!-- Please answer the following questions: <br><br> -->
-			<!-- All the questions are YES/NO questions. <br><br> -->
-			(yes = 1 and no = 0) <br><br>
-		</h5>
+		<H3 id = "head_">Predict your stress level by answering these questions !</H3><br><br>
+		
 
 
-		<form action="{{ url_for('predict')}}", method="post">
+		<form action="{{ url_for('predict')}}", method="post" id = "f1">
 			<div data-aos="fade-up"data-aos-offset="200"
 			data-aos-delay="50"
 			data-aos-duration="1000">
@@ -297,7 +292,7 @@
 					<br>
 					<br>
 			
-				<div ><button type="submit" style="background-color: #07a799; color:white; margin-bottom: 3%; border: none;">Predict</button></div>
+				<div><button type="submit" style="background-color: #07a799; color:white; margin-bottom: 3%; border: none;" id = "predict">Predict</button></div>
 			
 				<div style= "margin-bottom: 5%;">{{prediction_text}}</div>
 
@@ -308,7 +303,11 @@
 	<br>
 
 	
-			
+	<script>
+		document.querySelector("#predict").addEventListener("click", function(event){
+  		event.preventDefault()
+		});
+	</script>		
 	
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
