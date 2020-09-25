@@ -1,2 +1,24 @@
 # decoding_stress
-pasckathon project
+Problem Statement - 
+
+
+
+
+
+Idea - 
+
+
+
+
+Technology Stack - 
+
+
+
+
+
+Buisiness Model - 
+
+
+
+
+Future Scope - 
