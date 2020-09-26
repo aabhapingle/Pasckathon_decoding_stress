@@ -11,7 +11,7 @@ To create a platform where the users can analyse their stress levels if they are
 # Technology Stack - <br>
 1. Image Processing - Open CV <br>
 2. Natural Language Processing (NLTK) <br>
-   `pip install numpy`
+   `pip install numpy`<br>
    `pip install --user -U nltk`
 3. Unity with Blender <br>
 4. Bootstrap <br>
