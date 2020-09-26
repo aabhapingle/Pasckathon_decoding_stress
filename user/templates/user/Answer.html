@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+
+    <title>ML PROJECT</title>
+    <!-- <script src="./app.js"></script> -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="id_nav" >
+		<a class="navbar-brand" class="nav-link disabled" href="#" style="cursor: default;">
+			<!-- <img src="b29fbe0e-a71a-4c81-a411-030f2534ac4c_200x200.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> -->
+
+			<img src="../frontend/img/b29fbe0e-a71a-4c81-a411-030f2534ac4c_200x200.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+			Stress Free
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	</nav>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+	*{
+		font-weight: 600;
+		font-size: 20px;
+		font-family:'Quicksand', sans-serif;
+	}
+	.qs{
+		font-size: 23px;
+		color:  #07a799;
+		margin-bottom: 2%;
+		margin-top: 4%;
+		text-align: center;
+	}
+	#head_{
+		text-align: center;
+		font-family: sans-serif;
+	}
+	*, .qs{
+		text-align: center;
+	}
+	@media only screen and (min-width: 900px){
+		*, .qs{
+			text-align: left;
+            font-weight: bolder;
+		}
+		body{
+			background-image: url(../frontend/img/Asset\ 3@2x.png);
+			background-attachment: fixed;
+			background-position: right;
+			background-repeat: no-repeat;
+			background-size: 40%;
+			background-position-y : 70%;
+
+		}
+
+	}
+	#head_{
+		font-family:'Quicksand', sans-serif;
+		font-weight: 1000;
+	}
+
+</style>
+<body>
+    {% csrf_token %}
+	<div class = "container" style="margin-top: 5%; ">
+		<H3 id = "head_">Companion Survey Test</H3><br><br>
+
+
+
+		<form id = "f1" >
+            {% csrf_token %}
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+				<div>
+					<p class = "qs" >1. In the last month, how often has the patient been upset because<br> of
+                        something that happened unexpectedly?<br></p>
+					<input type="radio" id = "_00" name = "0" value = 0 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_01" name = "0" value = 1 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_02" name = "0" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_03" name = "0" value = 3 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_04" name = "0" value = 4 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+				<div >
+					<p class = "qs">2. In the last month, how often has the patient felt that he/she<br> was unable to
+                        control the important things in his/her life? <br></p>
+					<input type="radio" id = "_10" name = "1" value = 0 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_11" name = "1" value = 1 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_12" name = "1" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_13" name = "1" value = 3 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_14" name = "1" value = 4 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+				<div >
+					<p class = "qs">3. In the last month, how often has the patient felt<br> nervous and “stressed”? <br></p>
+					<input type="radio" id = "_20" name = "2" value = 0 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_21" name = "2" value = 1 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_22" name = "2" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_23" name = "2" value = 3 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_24" name = "2" value = 4 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+			<div >
+				<p class = "qs">4. In the last month, how often has the patient felt<br> confident about his/her
+                    ability to handle his/her personal problems? <br></p>
+				<input type="radio" id = "_30" name = "3" value = 4 onclick = func(name,value)>
+                <label for="yes">Never</label><br>
+                <input type="radio" id = "_31" name = "3" value = 3 onclick = func(name,value)>
+                <label for="no">Almost never</label><br>
+                <input type="radio" id = "_32" name = "3" value = 2 onclick = func(name,value)>
+                <label for="no">Sometimes</label><br>
+                <input type="radio" id = "_33" name = "3" value = 1 onclick = func(name,value)>
+                <label for="no">Fairly often</label><br>
+                <input type="radio" id = "_34" name = "3" value = 0 onclick = func(name,value)>
+                <label for="no">Very often</label><br>
+			</div>
+			</div>
+
+
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+				<div >
+					<p class = "qs">5. In the last month, how often has the patient felt that<br> things were going
+                        his/her way? <br></p>
+					<input type="radio" id = "_40" name = "4" value = 4 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_41" name = "4" value = 3 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_42" name = "4" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_43" name = "4" value = 1 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_44" name = "4" value = 0 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+				<div >
+					<p class = "qs">6. In the last month, how often did the patient feel that he/she<br> could not cope
+                        with all the things that he/she had to do? <br></p>
+					<input type="radio" id = "_50" name = "5" value = 0 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_51" name = "5" value = 1 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_52" name = "5" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_53" name = "5" value = 3 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_54" name = "5" value = 4 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+				<div >
+					<p class = "qs">7. In the last month, how often has the patient been able to<br>control irritations
+                        in his/her life?
+                        <br></p>
+					<input type="radio" id = "_60" name = "6" value = 4 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_61" name = "6" value = 3 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_62" name = "6" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_63" name = "6" value = 1 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_64" name = "6" value = 0 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+				<div >
+					<p class = "qs">8. In the last month, how often did the patient feel<br> that he/she was on top of
+                        things? <br></p>
+					<input type="radio" id = "_70" name = "7" value = 4 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_71" name = "7" value = 3 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_72" name = "7" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_73" name = "7" value = 1 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_74" name = "7" value = 0 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+				<div >
+					<p class = "qs">9. In the last month, how often has the patient angered because<br> of
+                        things that were outside of his/her control? <br></p>
+					<input type="radio" id = "_80" name = "8" value = 0 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_81" name = "8" value = 1 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_82" name = "8" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_83" name = "8" value = 3 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_84" name = "8" value = 4 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+
+			<div data-aos="fade-up"data-aos-offset="200"
+			data-aos-delay="50"
+			data-aos-duration="1000">
+
+				<div >
+					<p class = "qs">10. In the last month, how often has the patient felt difficulties<br> were piling up
+                        so high that he/she could not overcome them?<br></p>
+					<input type="radio" id = "_90" name = "9" value = 0 onclick = func(name,value)>
+					<label for="yes">Never</label><br>
+					<input type="radio" id = "_91" name = "9" value = 1 onclick = func(name,value)>
+                    <label for="no">Almost never</label><br>
+                    <input type="radio" id = "_92" name = "9" value = 2 onclick = func(name,value)>
+                    <label for="no">Sometimes</label><br>
+                    <input type="radio" id = "_93" name = "9" value = 3 onclick = func(name,value)>
+                    <label for="no">Fairly often</label><br>
+                    <input type="radio" id = "_94" name = "9" value = 4 onclick = func(name,value)>
+					<label for="no">Very often</label><br>
+				</div>
+			</div>
+
+
+					<br>
+					<br>
+
+				<div><button type="submit" style="background-color: #07a799; color:white; margin-bottom: 6%; border: none;" id = "predict" onclick="disp()">Predict</button></div>
+                <a href={% url "answer" %}>Next</a>
+
+        </form>
+        <div><p  id ="statement"></p></div>
+        <div><p id = "level" style="margin-bottom: 2%;"></p></div>
+        <div><p id = "1" style="font-size: 25px;"></p></div><br>
+        <div><p id = "2"style="font-size: 25px;"></p></div><br>
+        <div><p id = "3"style="font-size: 25px;"></p></div><br>
+        <!-- <p id="demo"></p> -->
+	</div>
+
+	<br>
+	<br>
+
+
+<script>
+
+            var form = document.getElementById("f1");
+            function handleForm(event) { event.preventDefault(); }
+            form.addEventListener('submit', handleForm);
+            arr = []
+            const func = (n, v) => {
+                arr[n] = parseInt(v)
+            }
+
+            const disp = () => {
+                console.log(arr)
+                level = arr.reduce((a, b) => a + b, 0)
+                console.log(level)
+
+                document.getElementById("statement").innerText = "Predicted stress level of the patient, based on your answers is: "
+                // document.getElementById("demo").innerHTML = "";
+                if (level<= 13 && level >=0){
+                    document.getElementById("level").innerText = level
+                    document.getElementById("level").style.color = "green";
+                    document.getElementById("level").style.fontSize = "80px";
+                    document.getElementById("level").style.textShadow =  "2px 2px green"
+                }
+                if (level<= 26 && level >=13){
+                    document.getElementById("level").innerText = level
+                    document.getElementById("level").style.color = "#D2D70B"
+                    document.getElementById("level").style.fontSize = "80px"
+                    document.getElementById("level").style.textShadow =  "2px 2px #D2D70B"
+                }
+                if (level<= 40 && level >=27){
+                    document.getElementById("level").innerText = level
+                    document.getElementById("level").style.color = "red"
+                    document.getElementById("level").style.fontSize = "80px"
+                    document.getElementById("level").style.textShadow =  "2px 2px red"
+                }
+
+                document.getElementById("1").innerText = " a score in the range 0-13 can be considered low stress"
+                document.getElementById("1").style.color = "green";
+                document.getElementById("2").innerText = " a score in the range 14-26 can be considered moderate stress"
+                document.getElementById("2").style.color = "#D2D70B"
+                document.getElementById("3").innerText = " a score in the range 27-40 can be considered high perceived stress"
+                document.getElementById("3").style.color = "red"
+
+            }
+
+    </script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+    </script>
+
+
+</body>
+</html>
