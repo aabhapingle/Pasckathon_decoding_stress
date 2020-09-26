@@ -12,6 +12,7 @@ To create a platform where the users can analyse their stress levels if they are
 1. Image Processing - Open CV <br>
 2. Natural Language Processing (NLTK) <br>
    `pip install numpy`
+   `pip install --user -U nltk`
 3. Unity with Blender <br>
 4. Bootstrap <br>
 5. MongoDB Database <br>
